@@ -24,8 +24,9 @@ function generatePassword() {
   // include uppercase
   var includeUppercase = confirm("Do you want to include upper case?")
   // include numbers
+  var numbers =[Math.floor(math.random)() * number. length)];
   // include special characters
-
+  var special characters = ("'!@#$%^&*()_+{}:"<>?\|[];\',./`~';");
   // check their answer to make sure atleast 1 character type is included
   if (!includeLowercase && !includeUppercase) {
     alert("Must have atleast 1 character type is required!");
