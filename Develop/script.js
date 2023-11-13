@@ -26,7 +26,7 @@ function generatePassword() {
   // include numbers
   var numbers =[Math.floor(math.random)() * number.length];
   // include special characters
-  var specialcharacters = ("'!@#$%^&*()_+{}:\"<>?\|[];\',./`~';");
+  var specialcharacters = confirm("'!@#$%^&*()_+{}:\"<>?\|[];\',./`~';");
   // check their answer to make sure atleast 1 character type is included
   if (!includeLowercase && !includeUppercase) {
     alert("Must have atleast 1 character type is required!");
@@ -37,10 +37,12 @@ function generatePassword() {
   // generate password!!
 
   // define character sets
-  var lowercase = "abcde";
-  var uppercase = "ABCDE";
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   //  var numbers
+  var numbers = "[Math.floor(math.random)() * number.length]";
   // var special
+  var special = "!@#$%^&*()_+{}:\"<>?\|[];\',./`~';"
 
   var basket = "";
 
