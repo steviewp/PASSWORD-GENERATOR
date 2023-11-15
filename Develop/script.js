@@ -23,12 +23,15 @@ function generatePassword() {
   var includeLowercase = confirm("Do you want to include lower case?")
   // include uppercase
   var includeUppercase = confirm("Do you want to include upper case?")
-  // include numbers
-  var numbers =[Math.floor(math.random)() * number.length];
-  // include special characters
-  var specialcharacters = confirm("'!@#$%^&*()_+{}:\"<>?\|[];\',./`~';");
+
+  // // include numbers
+  var includeNumbers = confirm("Do you want to include numbers?")
+  // var numbers =[Math.floor(math.random)() * number.length];
+  // // include special characters
+  var includeSpecial = confirm("Do you want to include special characters?");
+
   // check their answer to make sure atleast 1 character type is included
-  if (!includeLowercase && !includeUppercase) {
+  if (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecial) {
     alert("Must have atleast 1 character type is required!");
     return ""
   }
@@ -39,9 +42,9 @@ function generatePassword() {
   // define character sets
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  //  var numbers
-  var numbers = "[Math.floor(math.random)() * number.length]";
-  // var special
+  // //  var numbers
+  var numbers = "0123456789";
+  // // var special
   var special = "!@#$%^&*()_+{}:\"<>?\|[];\',./`~';"
 
   var basket = "";
@@ -52,6 +55,14 @@ function generatePassword() {
 
   if (includeUppercase) {
     basket += uppercase;
+  }
+
+  if(includeNumbers) {
+    basket += numbers;
+  }
+
+  if(includeSpecial) {
+    basket += special;
   }
 
   console.log(basket)
